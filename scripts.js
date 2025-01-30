@@ -102,9 +102,7 @@ function generateQuadraticProblem() {
         type: "quadratic",
         answer: [root1.toFixed(2), root2.toFixed(2)],
     };
-    return `Solve the quadratic equation: $${a}x^2 ${
-        b >= 0 ? "+" : "-"
-    } ${Math.abs(b)}x ${c >= 0 ? "+" : "-"} ${Math.abs(c)} = 0$`;
+    return `Solve the quadratic equation: ${a}x^2 ${b >= 0 ? "+" : "-"} ${Math.abs(b)}x ${c >= 0 ? "+" : "-"} ${Math.abs(c)} = 0`;
 }
 
 function generateExponentialProblem() {
@@ -116,7 +114,7 @@ function generateExponentialProblem() {
         answer: exponent,
     };
 
-    return `Solve for x: $${base}^x = ${result}$`;
+    return `Solve for x: ${base}^{x} = ${result}`;
 }
 
 function generateLogarithmicProblem() {
@@ -126,7 +124,7 @@ function generateLogarithmicProblem() {
         type: "logarithmic",
         answer: Math.log(value) / Math.log(base),
     };
-    return `Solve for x: $\\log_{${base}}(${value}) = x$`;
+    return `Solve for x: log_{${base}}(${value}) = x`;
 }
 
 function generateRationalProblem() {
@@ -150,7 +148,7 @@ function generateRationalProblem() {
         type: "rational",
         answer: solution,
     };
-    return `Solve for x: $\\frac{${a}x + ${b}}{${c}x + ${d}} = ${e}$`;
+    return `Solve for x: \\frac{${a}x + ${b}}{${c}x + ${d}} = ${e}`;
 }
 
 function generatePolynomialProblem() {
@@ -169,7 +167,7 @@ function generatePolynomialProblem() {
             return `${coeff >= 0 && index > 0 ? "+" : ""}${coeff}x^${power}`;
         })
         .join(" ");
-    return `Find the roots: $${polynomial} = 0$`;
+    return `Find the roots: ${polynomial} = 0`;
 }
 
 function generateTrigonometryProblem() {
@@ -182,7 +180,7 @@ function generateTrigonometryProblem() {
         type: "trigonometry",
         answer: answer.toFixed(2),
     };
-    return `Find the value of $${functionType}(${angle}^\\circ)$`;
+    return `Find the value of ${functionType}(${angle}^\\circ)`;
 }
 
 function checkAnswer() {
