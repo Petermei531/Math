@@ -283,7 +283,8 @@ function checkAnswer() {
 function displayProblem(problem) {
     const problemElement = document.getElementById("problemDisplay");
     problemElement.innerHTML = problem;
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, problemElement]);
+    // Use jqMath to render the equation
+    M.parseMath(problemElement);
 }
 
 // Initial problem generation
